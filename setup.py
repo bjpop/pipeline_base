@@ -7,7 +7,7 @@ setup(
     version='1.0.0',
     author='Bernie Pope',
     author_email='bjpope@unimelb.edu.au',
-    packages=['src'],
+    packages=['pipeline_base'],
     #entry_points={
     #    'console_scripts': ['fampipeline = src.main:main']
     #},
