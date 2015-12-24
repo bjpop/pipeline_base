@@ -13,7 +13,6 @@ Repository: https://github.com/bjpop/complexo_pipeline
 from __future__ import print_function
 from ruffus import *
 import ruffus.cmdline as cmdline
-from version import version
 import sys
 from config import Config
 from state import State
@@ -28,7 +27,7 @@ DEFAULT_JOBSCRIPT_DIR = 'jobscripts'
 DEFAULT_CONFIG_FILE = 'pipeline.config'
 
 
-def parse_command_line():
+def parse_command_line(version):
     '''Parse the command line arguments of the pipeline'''
     parser = cmdline.get_argparse(description='Variant calling pipeline',
         ignored_args = ["version"] )
@@ -45,10 +44,10 @@ def parse_command_line():
 
 
 #def main():
-def main(program_name, make_pipeline):
+def main(program_name, program_version, make_pipeline):
     '''Initialise the pipeline, then run it'''
     # Parse command line arguments
-    options = parse_command_line()
+    options = parse_command_line(program_version)
     # Initialise the logger
     logger = Logger(__name__, options.log_file, options.verbose)
     # Log the command line used to run the pipeline

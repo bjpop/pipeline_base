@@ -8,9 +8,6 @@ setup(
     author='Bernie Pope',
     author_email='bjpope@unimelb.edu.au',
     packages=['pipeline_base'],
-    #entry_points={
-    #    'console_scripts': ['fampipeline = src.main:main']
-    #},
     url='https://github.com/bjpop/pipeline_base',
     license='LICENSE',
     description='support infrastructure for writing Bioinformatics pipelines using Ruffus',
